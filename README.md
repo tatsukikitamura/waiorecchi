@@ -6,6 +6,3 @@
 ## 🛠 技術スタック
 - **言語**: Python,Js,Ts,Html,Css
 - **ツール**: Cursor,React
-
-## 📈 GitHub ステータス
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=waiorecchi&show_icons=true&theme=radical)
