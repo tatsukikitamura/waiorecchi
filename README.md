@@ -6,3 +6,5 @@
 ## 🛠 技術スタック
 - **言語**: Python,Js,Ts,Html,Css
 - **ツール**: Cursor,React
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=waiorecchi)](https://github.com/anuraghazra/github-readme-stats)
