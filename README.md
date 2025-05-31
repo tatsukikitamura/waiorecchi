@@ -7,4 +7,4 @@
 - **言語**:PYTHON,TS,HTML,CSS
 - **ツール**: Cursor,VScode
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=waiorecchi)](https://github.com/anuraghazra/github-readme-stats)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=waiorecchi&layout=compact)
