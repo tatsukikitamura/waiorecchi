@@ -6,6 +6,5 @@
 ## 🛠 技術スタック
 - **言語**:PYTHON,TS,HTML,CSS
 - **ツール**: Cursor,VScode
-![tryhackme_stats](<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4877687" style='border:none;'></iframe>)
-
+[![TryHackMe](https://tryhackme-badges.s3.amazonaws.com/4877687.png)](https://tryhackme.com/ju/4877687)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=waiorecchi&layout=compact)
