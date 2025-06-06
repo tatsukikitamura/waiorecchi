@@ -6,5 +6,5 @@
 ## 🛠 技術スタック
 - **言語**:PYTHON,TS,HTML,CSS
 - **ツール**: Cursor,VScode
-![tryhackme stats](https://raw.githubusercontent.com/tatukikitamura/tatukikitamura/master/assets/thm_propic.png)
+![tryhackme stats](https://raw.githubusercontent.com/waiorecchi/waiorecchi/main/assets/thm_propic.png)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=waiorecchi&layout=compact)
