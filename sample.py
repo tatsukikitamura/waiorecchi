@@ -11,6 +11,4 @@ def save_image(filename, image):
     with open(filename, "wb") as fout:
         fout.write(image)
 
-print(res.content)
-
-save_image("assets/thm_propic.svg",res.content)
+save_image("assets/thm_propic.png",res.content)
