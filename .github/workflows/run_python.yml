@@ -1,0 +1,25 @@
+name: Run Python Script
+
+on:
+  push:
+    branches: [ "main" ]  # mainブランチにpush時に実行
+  schedule:
+    - cron: '0 0 * * *'  # 毎日UTC 00:00に実行（任意で変更可能）
+  workflow_dispatch:      # 手動実行も可能
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4  # リポジトリのコードをチェックアウト
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"  # Pythonのバージョンを指定
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # 依存ライブラリをインストール
+
+      - name: Run Python script
+        run: python main.py  # Pythonスクリプトを実行
