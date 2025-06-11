@@ -3,7 +3,7 @@ import time
 
 def update_thm_badge():
     # キャッシュ回避用にタイムスタンプを付与
-    api_url = f"https://tryhackme-badges.s3.amazonaws.com/tatsukikitamura.png?ts={int(time.time())}"
+    api_url = f"https://tryhackme-badges.s3.amazonaws.com/tatsukikitamura.png?update=5"
     
     res = requests.get(api_url)
     if res.status_code == 200:
