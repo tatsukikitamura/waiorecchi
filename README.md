@@ -7,4 +7,4 @@
 - **言語**:PYTHON,TS,HTML,CSS
 - **ツール**: Cursor,VScode
  <img alt="top langs" height="340px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=waiorecchi&theme=dark&layout=compact&langs_count=16&card_width=320&date=1750640805" />
-![tryhackme stats](https://raw.githubusercontent.com/waiorecchi/waiorecchi/main/assets/thm_propic.png)
+
