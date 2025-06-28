@@ -1,25 +1,31 @@
-name: Run Python Script
+name: Update README
 
 on:
-  push:
-    branches: [ "main" ]  # mainブランチにpush時に実行
   schedule:
-    - cron: '0 0 * * *'  # 毎日UTC 00:00に実行（任意で変更可能）
-  workflow_dispatch:      # 手動実行も可能
+    - cron: "0 0 * * *" # 毎日午前0時（UTC）
+  workflow_dispatch: # 手動実行可能
 
 jobs:
-  run-python:
+  update-readme:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4  # リポジトリのコードをチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.11"  # Pythonのバージョンを指定
+      - name: Update README
+        run: |
+          # ここにREADME更新処理を追加
+          echo "Last updated: $(date)" >> README.md
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt  # 依存ライブラリをインストール
-
-      - name: Run Python script
-        run: python sample.py  # Pythonスクリプトを実行
+      - name: Commit and push changes
+        if: github.event_name != 'push' # プッシュイベント時はスキップ
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git
+          git add README.md
+          git diff --quiet && git diff --cached --quiet || git commit -m "Update README"
+          git push
