@@ -1,6 +1,6 @@
 name: Update README
 
-on:
+on:　
   schedule:
     - cron: "0 0 * * *" # 毎日午前0時（UTC）
   workflow_dispatch: # 手動実行可能
