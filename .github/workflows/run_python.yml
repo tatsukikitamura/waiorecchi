@@ -1,6 +1,6 @@
 name: Update README
 
-on:　
+on:
   schedule:
     - cron: "0 0 * * *" # 毎日午前0時（UTC）
   workflow_dispatch: # 手動実行可能
@@ -12,10 +12,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          ref: main  # 特定のブランチを指定
 
       - name: Update README
         run: |
-          
+          # ここにREADMEを更新する実際の処理を記述
+          echo "# Updated on $(date)" >> README.md
 
       - name: Commit and push changes
         if: github.event_name != 'push' # プッシュイベント時はスキップ
@@ -26,5 +29,4 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git
           git add README.md
-          git diff --quiet && git diff --cached --quiet || git commit -m "Update README"
-          git push
+          git diff --quiet && git diff --cached --quiet || (git commit -m "Update README" && git push)
