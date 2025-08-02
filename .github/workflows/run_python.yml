@@ -2,7 +2,7 @@ name: Update README
 
 on:
   schedule:
-    - cron: "0 0 * * *" # 毎日午前0時（UTC）
+    - cron: "0 0 * * *" # 毎日午前0時
   workflow_dispatch: # 手動実行可能
 
 jobs:
