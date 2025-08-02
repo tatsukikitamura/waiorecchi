@@ -17,9 +17,7 @@ jobs:
 
       - name: Update README
         run: |
-          # ここにREADMEを更新する実際の処理を記述
-          echo "# Updated on $(date)" >> README.md
-
+         
       - name: Commit and push changes
         if: github.event_name != 'push' # プッシュイベント時はスキップ
         env:
